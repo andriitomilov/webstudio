@@ -1,0 +1,57 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $card-set-gap;
+}
+
+.grid__item {
+  @media screen and (min-width: $tablet-size) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: $desktop-size) {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+
+.grid__item--three-card {
+  flex-basis: 100%;
+
+  @media screen and (min-width: $tablet-size){
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: $desktop-size){
+    flex-basis: calc((100% - 60px) / 3);
+  }
+  
+}
+
+.grid__item--six-card {
+  flex-basis: calc((100% - 30px) / 2);
+
+  @media screen and (min-width: $tablet-size) {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+  @media screen and (min-width: $desktop-size) {
+    flex-basis: calc((100% - 180px) / 6);
+  }
+}
+
+.grid__item--relative {
+  position: relative;
+}
+
+.grid__item--decorated {
+  background: #ffffff;
+  box-shadow: $box-shadow-grid-decorated;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.grid__item--product-decorated {
+  border: 1px solid $color-border-secondary;
+  transition: box-shadow $transition-function-time $transition-function-type;
+
+  &:hover {
+    box-shadow: $box-shadow-product;
+  }
+}

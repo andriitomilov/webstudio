@@ -1,0 +1,28 @@
+.btn {
+  padding: 10px 24px;
+
+  color: $color-hero-primary;
+  background-color: $color-accent;
+  font-family: $font-family-brand;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid $color-accent;
+  border-radius: 4px;
+  transition: background-color $transition-function-time $transition-function-type;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-accent-hero-btn;
+  }
+
+  @media screen and (min-width: $desktop-size) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+

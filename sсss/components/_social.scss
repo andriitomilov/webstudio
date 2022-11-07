@@ -1,0 +1,29 @@
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social__link {
+  @include centered();
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  transition: background-color $transition-function-time $transition-function-type;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+}
+
+.social__icon {
+  fill: $fill-team-icons;
+  transition: fill $transition-function-time $transition-function-type;
+
+  .social__link:hover &,
+  .social__link:focus & {
+    fill: $color-hero-primary;
+  }
+}

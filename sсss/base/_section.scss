@@ -1,0 +1,21 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop-size) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.section--large-padding {
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  @media screen and (min-width: $desktop-size) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+}
+.section--no-padding-top {
+  padding-top: 0;
+}

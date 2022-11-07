@@ -1,0 +1,77 @@
+.hero {
+  color: $color-hero-primary;
+  background-color: $bg-color-footer;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.hero__overlay {
+  margin: 0 auto;
+  max-width: 480px;
+  height: fit-content;
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-bg-mobile.jpg);
+
+  @extend %background;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-mobile@2x.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-mobile@3x.jpg);
+  }
+
+  @media screen and (min-width: calc($mobile-size + 1px)) {
+    max-width: $tablet-size;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-tablet.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-tablet@2x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-tablet@3x.jpg);
+    }
+  }
+
+  @media screen and (min-width: calc($tablet-size + 1px)) {
+    max-width: 1600px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-bg-desktop.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-desktop@2x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero-bg-desktop@3x.jpg);
+    }
+  }
+}
+
+.hero__title {
+  max-width: 360px;
+  margin: 0 auto 30px;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.6;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $desktop-size) {
+    max-width: 696px;
+
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}

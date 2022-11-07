@@ -1,0 +1,27 @@
+.benefits__decor {
+  @include centered();
+
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: $bg-color-team;
+  border-radius: 4px;
+}
+
+.benefits__title {
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: $color-secondary;
+
+  @media screen and (max-width: calc($tablet-size - 1px)) {
+    text-align: center;
+  }
+}
+
+.benefits__text {
+  line-height: 1.71;
+}

@@ -1,0 +1,42 @@
+body {
+  color: $color-primary;
+  font-family: $font-family-brand;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media screen and (min-width: $mobile-size) {
+    width: $mobile-size;
+  }
+  @media screen and (min-width: $tablet-size) {
+    width: $tablet-size;
+  }
+
+  @media screen and (min-width: $desktop-size) {
+    width: $desktop-size;
+  }
+}
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.title {
+  margin-bottom: 30px;
+
+  font-size: 33px;
+  line-height: 1.17;
+
+  color: $color-secondary;
+
+  @media screen and (min-width: $desktop-size){
+    margin-bottom: 50px;
+
+    font-size: 36px;
+  }
+}
+

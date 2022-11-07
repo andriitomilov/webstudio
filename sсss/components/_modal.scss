@@ -1,0 +1,146 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  padding: 40px;
+  width: 90%;
+  height: fit-content;
+
+  text-align: center;
+
+  background-color: $color-hero-primary;
+  box-shadow: $box-shadow-grid-decorated;
+  border-radius: 4px;
+
+  opacity: 1;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $transition-function-time $transition-function-type,
+    opacity $transition-function-time $transition-function-type;
+
+  @media screen and (min-width: $mobile-size) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop-size) {
+    width: 528px;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  @include centered();
+
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+
+  background-color: transparent;
+  border: 1px solid $color-modal-close;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.modal__icon-close {
+  transition: fill $transition-function-time $transition-function-type;
+
+  .modal__close:hover &,
+  .modal__close:focus & {
+    fill: $color-accent;
+  }
+}
+
+.modal__title {
+  margin-bottom: 12px;
+
+  font-size: 20px;
+  line-height: 1.5;
+
+  color: $color-secondary;
+
+  @media screen and (min-width: $desktop-size) {
+    line-height: 1.15;
+  }
+}
+
+.modal__list {
+  margin-bottom: 20px;
+
+  & .modal__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.modal__label {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  & span {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.17;
+
+    letter-spacing: 0.01em;
+
+    color: $color-primary;
+  }
+}
+
+.modal__input {
+  align-self: stretch;
+  padding: 0px 42px;
+  height: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: outline $transition-function-time $transition-function-type,
+    border-color $transition-function-time $transition-function-type;
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:focus {
+    outline: 1px solid $color-accent;
+    border-color: $color-accent;
+  }
+}
+
+.modal__input--textarea {
+  padding: 12px 16px;
+  min-height: 120px;
+
+  resize: none;
+}
+
+.modal__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  fill: #212121;
+
+  transition: fill $transition-function-time $transition-function-type;
+
+  .modal__input:hover + &,
+  .modal__input:focus + & {
+    fill: $color-accent;
+  }
+}
+
+.modal__btn {
+  padding: 10px 52px;
+}

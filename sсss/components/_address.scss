@@ -1,0 +1,32 @@
+.address {
+  @media screen and (min-width: $tablet-size) {
+    width: 230px;
+  }
+}
+
+.address__link {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+
+  color: $color-address;
+
+  transition: color $transition-function-time $transition-function-type;
+
+  &:hover,
+  &:focus {
+    color: $color-hero-primary;
+  }
+}
+
+.address__link--white {
+  color: $color-hero-primary;
+}
+
+.address__list .address__item:not(:last-child) {
+  margin-bottom: 8px;
+
+  @media screen and (min-width: $desktop-size) {
+    margin-bottom: 9px;
+  }
+}

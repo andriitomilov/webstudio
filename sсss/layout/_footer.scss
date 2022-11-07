@@ -1,0 +1,119 @@
+.footer {
+  padding: 60px 0;
+
+  background-color: $bg-color-footer;
+  & .social__link:hover,
+  & .social__link:focus {
+    background-color: $color-accent;
+  }
+  & .social__icon {
+    fill: $color-hero-primary;
+  }
+}
+
+.footer__container {
+  & .social__link {
+    background-color: $bg-color-footer-link;
+  }
+
+  @media screen and (max-width: calc($desktop-size - 1px)) {
+    text-align: center;
+  }
+  @media screen and (min-width: $tablet-size) {
+    display: flex;
+  }
+  @media screen and (min-width: $tablet-size) and (max-width: calc($desktop-size - 1px)) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: $desktop-size) {
+    align-items: baseline;
+
+    & .footer__box:first-child {
+      margin-right: 70px;
+    }
+    & .footer__box:nth-child(2) {
+      margin-right: 93px;
+    }
+  }
+}
+
+.footer__box {
+  @media screen and (max-width: calc($desktop-size - 1px)) {
+    .footer__container &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  @media screen and (min-width: $desktop-size) {
+    .footer__container &:first-child {
+      margin-right: 70px;
+    }
+    .footer__container &:fth-child(2) {
+      margin-right: 93px;
+    }
+  }
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer__title {
+  margin-bottom: 20px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: $color-hero-primary;
+}
+
+.footer__form {
+  @media screen and (min-width: $desktop-size) {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+.footer__input {
+  padding: 0 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 50px;
+
+  border: 1px solid $color-footer-border;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: $color-footer-input-text;
+  background-color: transparent;
+
+  border-radius: 4px;
+
+  @media screen and (min-width: $mobile-size) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: $desktop-size) {
+    width: 358px;
+  }
+}
+
+.footer__btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 28px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: none;
+}
+.footer__icon {
+  fill: currentColor;
+}
