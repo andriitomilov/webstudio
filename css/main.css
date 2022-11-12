@@ -543,6 +543,7 @@ body {
 }
 
 .filter__btn {
+  display: block;
   min-width: 73px;
   padding: 6px 22px;
   color: #212121;
